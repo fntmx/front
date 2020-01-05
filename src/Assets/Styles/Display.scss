@@ -1,0 +1,51 @@
+.page {
+  .page-title {
+    h1 {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    sub {
+      display: block;
+      margin: 5px 0 0;
+    }
+
+    margin-bottom: 2em;
+  }
+
+  .page-container {
+    width: 80%;
+    margin: 50px auto;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-gap: 25px;
+
+  .grid-item {
+    padding: 1em 2em 1.5em;
+    background-color: rgba(128, 128, 128, 0.1);
+    border-radius: 4px;
+    transition: border 0.3s ease-in-out, background-color 0.3s ease;
+    border: 2px solid rgba(128, 128, 128, 0);
+
+    &:hover {
+      cursor: pointer;
+      border: 2px solid $dark;
+      background-color: rgba(128, 128, 128, 0.2);
+    }
+  }
+}
+
+.flex {
+  display: flex;
+
+  .flex-item {
+
+  }
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Kulim+Park&display=swap');
+@import "Variables";
+
+* {
+  box-sizing: border-box;
+}
+
+html body {
+  margin: 0;
+  font-family: 'Kulim Park', sans-serif;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@import "Display";
+@import "Navigation";
+@import "Alert";
+@import "Button";
+@import "Input";
+@import "Table";
+
+//Pages
+@import "Pages/Articles";

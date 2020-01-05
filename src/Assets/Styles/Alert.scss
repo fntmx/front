@@ -1,0 +1,48 @@
+.alert {
+    background-color: rgba($dark, 0.6);
+    padding: 1.5em;
+    //border-radius: 4px;
+
+    width: auto;
+    height: auto;
+    min-height: 50px;
+
+    &.alert-success {
+        background-color: rgba($success, 0.6);
+        border-left: 5px solid rgba($success, 1);
+    }
+
+    &.alert-warning {
+        background-color: rgba($warning, 0.6);
+        border-left: 5px solid rgba($warning, 1);
+    }
+
+    &.alert-danger {
+        background-color: rgba($danger, 0.6);
+        border-left: 5px solid rgba($danger, 1);
+    }
+
+
+    .alert-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        .icon {
+            display: flex;
+            align-items: center;
+            margin-right: 1em;
+
+        }
+        span {
+
+        }
+        sub {
+
+        }
+    }
+
+    .alert-content {
+
+    }
+}

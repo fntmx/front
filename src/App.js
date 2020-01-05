@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ArticlesPage from "./Components/Pages/Articles";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+import NavigationBar from "./Components/Navigation";
+import {CLIENT_ROUTES} from "./Routes";
+import ProjectsPage from "./Components/Pages/Projects";
+import AdminPage from "./Components/Pages/Admin";
+import {createMuiTheme, MuiThemeProvider} from "@material-ui/core";
+import ArticlePage from "./Components/Pages/Article";
+
+const theme = createMuiTheme({
+        palette: {
+            primary: {
+                main: '#ffc107'
+            },
+            secondary: {
+                main: '#343a40'
+            }
+        }
+    },
+);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="bmwadforth">
+            <MuiThemeProvider theme={theme}>
+                <BrowserRouter>
+                    <NavigationBar/>
+                    <Switch>
+                        <Route exact path={CLIENT_ROUTES.HOME} component={ArticlesPage} />
+                        <Route path={CLIENT_ROUTES.ARTICLES} component={ArticlesPage} />
+                        <Route path={CLIENT_ROUTES.ARTICLE()} component={ArticlePage} />
+                        <Route path={CLIENT_ROUTES.PROJECTS} component={ProjectsPage} />
+                        <Route path={CLIENT_ROUTES.ADMIN} component={AdminPage} />
+                    </Switch>
+                </BrowserRouter>
+            </MuiThemeProvider>
+        </div>
+    );
 }
 
 export default App;

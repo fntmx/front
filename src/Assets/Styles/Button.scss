@@ -1,0 +1,62 @@
+.button {
+  height: 50px;
+  padding: 0.85em;
+  background-color: rgba($dark, 1);
+  text-align: center;
+  margin: 2em 0;
+  border-radius: 4px;
+  width: auto;
+  border: 2px solid rgba($dark, 0.1);
+  color: $light;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &.button-default {
+    background-color: rgba($dark, 0);
+    border: 2px solid rgba($dark, 0.1);
+    color: $dark;
+
+    &:hover {
+      cursor: pointer;
+      border: 2px solid rgba($dark, 1);
+    }
+  }
+
+  &.button-success {
+    background-color: rgba($success, 1);
+    border: 2px solid rgba($success, 1);
+
+    &:hover {
+      border: 2px solid $success;
+      background-color: rgba($success, 0);
+      color: $dark;
+    }
+  }
+
+  &.button-warning {
+    background-color: rgba($warning, 1);
+    border: 2px solid rgba($warning, 1);
+
+    &:hover {
+      border: 2px solid $warning;
+      background-color: rgba($warning, 0);
+      color: $dark;
+    }
+  }
+
+  &.button-danger {
+    background-color: rgba($danger, 1);
+    border: 2px solid rgba($danger, 1);
+
+    &:hover {
+      border: 2px solid $danger;
+      background-color: rgba($danger, 0);
+      color: $dark;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $dark;
+    background-color: rgba($dark, 0);
+  }
+}
