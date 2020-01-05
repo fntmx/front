@@ -16,7 +16,7 @@ export default function ArticleTile({id, title, description, tags, author, creat
                 <ArticleTags tags={tags} />
                 <div className="article-meta">
                     <p>Written by {author.username}</p>
-                    <sub>Created {moment(created).format("ddd DD MMM YYYY")}</sub>
+                    <sub>Created {moment(created).format("DD MMM YYYY")}</sub>
                 </div>
             </GridItem>
         </Link>
