@@ -19,6 +19,10 @@ export default function AuthenticatedAdminPage() {
                         <ArticlesTable/>
                     </div>
                     <div>
+                        <h2>Projects</h2>
+                        <Alert title="Coming Soon" status="warning" />
+                    </div>
+                    <div>
                         <h2>Users</h2>
                         <Alert title="Coming Soon" status="warning" />
                     </div>

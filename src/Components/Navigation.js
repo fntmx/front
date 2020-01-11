@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {CLIENT_ROUTES} from "../Routes";
 
 export default function NavigationBar(){
     return (
@@ -10,9 +11,8 @@ export default function NavigationBar(){
                 </div>
                 <div className="navigation-links">
                     <ul>
-                        <li><Link to="/articles">Articles</Link></li>
-                        <li><Link to="/projects">Projects</Link></li>
-                        <li><Link to="/other">Other</Link></li>
+                        <li><Link to={CLIENT_ROUTES.ARTICLES}>Articles</Link></li>
+                        <li><Link to={CLIENT_ROUTES.PROJECTS}>Projects</Link></li>
                     </ul>
                 </div>
             </nav>

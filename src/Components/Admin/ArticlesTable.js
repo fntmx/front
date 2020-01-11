@@ -51,6 +51,9 @@ const useStyles = makeStyles(theme => ({
     chip: {
         minWidth: '25px',
         margin: theme.spacing(0.5),
+    },
+    buttons: {
+        marginBottom: '1em'
     }
 }));
 
@@ -98,7 +101,7 @@ export default function ArticlesTable() {
             {showEditArticleDialog &&
             <ArticleDialog title="Edit Article" open={showEditArticleDialog} onClose={() => setShowEditArticleDialog(false)} onSave={saveArticle} defaultArticle={selectedArticle}/>}
 
-            <ButtonGroup>
+            <ButtonGroup className={classes.buttons}>
                 <Button variant="outlined" color="primary" onClick={() => setShowNewArticleDialog(true)}>
                     New Article
                 </Button>

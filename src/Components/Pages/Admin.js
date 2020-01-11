@@ -3,7 +3,7 @@ import AuthenticatedAdminPage from "./Admin/AuthenticatedAdmin";
 import UnauthenticatedAdminPage from "./Admin/UnauthenticatedAdmin";
 
 export default function AdminPage() {
-    const authenticated = false;
+    const authenticated = true;
 
     if(authenticated){
         return <AuthenticatedAdminPage/>

@@ -10,7 +10,7 @@ import {LinearProgress} from "@material-ui/core";
 import Debouncer from "../../Util/Debouncer";
 
 export default function ArticlesPage() {
-    const [limit, setLimit] = useState(null);
+    const [limit, setLimit] = useState(10);
     const [offset, setOffset] = useState(null);
     const [search, setSearch] = useState("");
     const [getArticles, {loading, data, error}] = useLazyQuery(ALL_ARTICLES);
@@ -51,9 +51,9 @@ export default function ArticlesPage() {
                     })}
                     {(data !== undefined && data.article.length === 0) && <sub>No Results Found</sub>}
                 </GridContainer>
-                {(data !== undefined && data.article.length !== 0) &&
+                {(data !== undefined && data.article.length !== 0 && data.article.length === limit) &&
                 <Button title="Load More" status="default" onClick={() => {
-                    limit === null ? setLimit(20) : setLimit(limit + 10);
+                    setLimit(limit + 10);
                 }}/>}
             </div>
         </div>
