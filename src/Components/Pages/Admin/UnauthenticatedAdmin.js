@@ -6,6 +6,7 @@ import {useMutation} from "@apollo/react-hooks";
 import {ADMIN} from "../../../GraphQL/Admin";
 import {gql} from "apollo-boost";
 import {LinearProgress} from "@material-ui/core";
+import Alert from "../../Common/Alert";
 
 const TOGGLE_AUTH = gql`
   mutation ToggleAuth($token: String!) {
@@ -17,17 +18,18 @@ export default function UnauthenticatedAdminPage() {
     const [user, setUser] = useState({username: "", password: ""});
 
     const JWT = ADMIN.MUTATION.LOGIN(user.username, user.password);
-    const [loginUser, { loading }] = useMutation(JWT);
+    const [loginUser, { loading, error }] = useMutation(JWT);
     const [toggleAuth] = useMutation(TOGGLE_AUTH);
 
     function login(){
         loginUser({ variables: { username: user.username, password: user.password} }).then(res => {
             console.log(res.data.login.token);
-            toggleAuth({ variables: { token: res.data.login.token } })
+            //toggleAuth({ variables: { token: res.data.login.token } })
         });
     }
 
     if(loading) return <LinearProgress/>;
+    if (error) return <Alert title={error.message} status="danger"/>;
 
     return (
         <div className="page page-admin">
