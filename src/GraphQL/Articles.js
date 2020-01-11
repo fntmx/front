@@ -7,8 +7,8 @@ export const COUNT_ARTICLES = gql`query {
 }`;
 
 export const ALL_ARTICLES = gql`
-query FetchArticles($offset: Int = 0, $limit: Int = 10, $withData: Boolean = false) {
-  article(offset: $offset, limit: $limit, withData: $withData) {
+query FetchArticles($offset: Int = 0, $limit: Int = 10, $keyword: String, $withData: Boolean = false) {
+  article(offset: $offset, limit: $limit, keyword: $keyword, withData: $withData) {
     id
     title
     tags
