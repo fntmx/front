@@ -1,0 +1,55 @@
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+
+  p {
+    margin: 0;
+  }
+
+  .article-grid-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background-color: rgba(128, 128, 128, 0.1);
+    border: 1px solid gray;
+    border-radius: 4px;
+    min-height: 200px;
+
+    .grid-item-title {
+      h2 {
+        margin: 0 0 0.5em 0;
+      }
+
+      .article-tags {
+        margin: 1em 0;
+
+        .article-tag {
+          display: inline-block;
+          margin-right: 0.25em;
+          padding: 0.5em;
+          background-color: red;
+          color: white;
+          border-radius: 4px;
+
+          &:hover {
+
+          }
+        }
+      }
+    }
+
+    .grid-item-footer {
+      display: block;
+
+      margin-top: auto;
+    }
+
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(128, 128, 128, 0.2);
+    }
+  }
+}
