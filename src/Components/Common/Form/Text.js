@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types"
 
-export default function Text({name}, props) {
+export default function Text({name, placeholder, value, onChange}) {
     return (
-        <input className="input-text" name={name} type="text" {...props} />
+        <input className="input-text" name={name} type="text" onChange={onChange} value={value} />
     );
 }
 
