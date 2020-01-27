@@ -9,7 +9,7 @@ export default function ArticlePage(){
     const { loading, error, data } = useQuery(ARTICLE, {variables: {id}});
 
     if (loading) return null;
-    if (error) return <Alert title="Error" subtitle={error} status="danger" />;
+    if (error) return <Alert title="Error" subtitle={error.message} status="danger" />;
 
     const {article} = data;
 

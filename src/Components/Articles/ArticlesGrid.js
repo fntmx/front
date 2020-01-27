@@ -30,7 +30,7 @@ export default function ArticlesGrid() {
     const { loading, error, data } = useQuery(ARTICLES);
 
     if (loading) return null;
-    if (error) return <Alert title="Error" subtitle={error} status="danger" />;
+    if (error) return <Alert title="Error" subtitle={error.message} status="danger" />;
 
     console.log(data);
 
