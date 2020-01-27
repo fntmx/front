@@ -5,7 +5,7 @@ import {ARTICLE} from "../../GraphQL/Query/Articles";
 
 export default function ArticlePage(){
     const { id } = useParams();
-    const { loading, error, data } = useQuery(ARTICLE, {variables: {id}, errorPolicy: "all"});
+    const { loading, error, data } = useQuery(ARTICLE, {variables: {id}});
 
     if (loading) return null;
     if (error) return `Error! ${error}`;

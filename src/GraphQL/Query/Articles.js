@@ -1,8 +1,8 @@
 import {gql} from "apollo-boost";
 
 export const ARTICLES = gql`
-query FetchArticles {
-    articles {
+query FetchArticles($keywords: [String]) {
+    articles(keywords: $keywords) {
         id
         title
         description

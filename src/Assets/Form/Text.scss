@@ -1,0 +1,29 @@
+@import "../_Variables";
+
+.input-shell {
+  width: 100%;
+  margin: 1em 0;
+
+  label {
+    display: inline-block;
+    margin-bottom: 0.25em;
+  }
+
+  input {
+    width: inherit;
+    @include border(rgba($dark, 0.2));
+    padding: 0.85em;
+    outline: none;
+    font-size: 1em;
+
+    &:hover {
+      cursor: pointer;
+      @include border(rgba($default, 1));
+    }
+  }
+
+}
+
+.input-text {
+
+}

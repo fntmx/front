@@ -13,4 +13,28 @@ a {
   color: inherit;
 }
 
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bmwadforth {
+  width: 80%;
+  margin: 0 auto;
+
+  .page {
+    margin: 1em 0;
+  }
+}
+
+//Pages
 @import "Articles";
+
+//Display
+@import "Display/Alert";
+
+//Form
+@import "Form/Text";

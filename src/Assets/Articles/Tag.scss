@@ -1,0 +1,19 @@
+@import "../_Variables";
+
+.article-tags {
+  margin: 1em 0;
+
+  .article-tag {
+    display: inline-block;
+    margin-right: 0.25em;
+    padding: 0.25em;
+    background-color: $default;
+    color: white;
+    border-radius: $border-radius;
+    font-size: 0.85em;
+
+    &:hover {
+
+    }
+  }
+}

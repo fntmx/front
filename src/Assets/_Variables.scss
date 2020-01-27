@@ -1,0 +1,23 @@
+//Colours
+$default: #005aff;
+$success: #31ab4d;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+$border-radius: 4px;
+$transition-time: 0.3s;
+
+//Includes default border style and consistent transition
+@mixin border($color: $default, $include_radius: true, $include_transition: true) {
+  border: 2px solid $color;
+
+  @if $include_radius {
+    border-radius: $border-radius;
+  }
+
+  @if $include_transition {
+    transition: border $transition-time ease;
+  }
+}
