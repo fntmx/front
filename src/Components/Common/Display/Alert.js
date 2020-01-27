@@ -1,26 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types"
+import { ReactComponent as SuccessIcon } from "../../../Assets/Icons/success.svg";
+import { ReactComponent as WarningIcon } from "../../../Assets/Icons/warning.svg";
+import { ReactComponent as ErrorIcon } from "../../../Assets/Icons/error.svg";
 
 export default function Alert({title, subtitle, status, children}) {
     function getIcon(){
         switch (status) {
             case "success":
-                return;
+                return <SuccessIcon/>;
             case "warning":
-                return;
+                return <WarningIcon/>;
             case "danger":
-                return;
+                return <ErrorIcon/>;
             default:
-                return
+                return <WarningIcon/>;
         }
     }
 
     return (
         <div className={`alert alert-${status}`}>
             <div className="alert-title">
-                <span>{getIcon()}</span>
-                <span>{title}</span>
-                {subtitle && <sub>{subtitle}</sub>}
+                <div className="alert-title-heading">
+                    <span className="heading-icon">{getIcon()}</span>
+                    <span className="heading-title">{title}</span>
+                </div>
+                {subtitle && <sub className="alert-title-subheading">{subtitle}</sub>}
             </div>
             {children && <div className="alert-content">
                 {children}

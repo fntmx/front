@@ -1,0 +1,50 @@
+@import "../Variables";
+
+.alert {
+  min-height: 80px;
+  background-color: rgba($default, 0.5);;
+  border-radius: $border-radius;
+  color: $light;
+
+  .alert-title {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid inherit;
+    padding: 1em;
+
+    .alert-title-heading {
+      display: flex;
+      margin-bottom: 0.5em;
+
+      .heading-icon {
+        width: 40px;
+        svg {
+          height: 20px;
+        }
+      }
+
+      .heading-title {
+
+      }
+    }
+
+    .alert-title-subheading {
+      margin-left: 40px;
+    }
+
+  }
+
+  .alert-content {
+
+  }
+
+  &.alert-warning {
+    background-color: rgba($warning, 0.5);
+    color: $dark;
+  }
+
+  &.alert-danger {
+    background-color: rgba($danger, 0.5);
+    color: $dark;
+  }
+}

@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 import {CLIENT_ROUTES} from "../../Routes";
 import InputShell from "../Common/Form/InputShell";
 import Text from "../Common/Form/Text";
+import Alert from "../Common/Display/Alert";
 
 function ArticleGrid({title, description, tags, created, author}){
     return (
@@ -24,12 +25,12 @@ function ArticleGrid({title, description, tags, created, author}){
     )
 }
 
-export default function ArticlesGrid({}) {
+export default function ArticlesGrid() {
     const [search, setSearch] = useState("");
     const { loading, error, data } = useQuery(ARTICLES);
 
     if (loading) return null;
-    if (error) return `Error! ${error}`;
+    if (error) return <Alert title="Error" subtitle={error} status="danger" />;
 
     console.log(data);
 

@@ -7,5 +7,6 @@ export const CLIENT_ROUTES = {
         } else {
             return `/article/:id`
         }
-    }
+    },
+    PROJECTS: "/projects"
 };

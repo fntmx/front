@@ -22,13 +22,14 @@ p {
 }
 
 .bmwadforth {
-  width: 80%;
-  margin: 0 auto;
 
   .page {
-    margin: 1em 0;
+    width: 80%;
+    margin: 1em auto;
   }
 }
+
+@import "Navigation";
 
 //Pages
 @import "Articles";
