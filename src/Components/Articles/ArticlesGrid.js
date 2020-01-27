@@ -33,7 +33,7 @@ export default function ArticlesGrid() {
     useEffect(() => {
         if (search) {
             Debouncer(() => {
-                getArticles({variables: {keywords: search.split(" ")}});
+                getArticles({variables: {keywords: search.split(" ").map(s => s.trim()).filter(Boolean)}});
             }, 1000);
         } else {
             getArticles();
@@ -45,8 +45,8 @@ export default function ArticlesGrid() {
 
     return (
         <>
-            <InputShell id="article-search" label="Search Articles">
-                <Text name="article-search" value={search} onChange={e => setSearch(e.target.value)}/>
+            <InputShell id="article-search" label="Search Articles" subLabel={search ? `Searching by keywords: ${search.split(" ").join(", ")}` : null}>
+                <Text name="article-search" value={search} onChange={e => setSearch(e.target.value)} />
             </InputShell>
             {data.articles.length === 0 && <Alert title="No Records Found" status="warning"/>}
             <div className="articles-grid">
