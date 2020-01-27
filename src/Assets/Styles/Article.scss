@@ -1,0 +1,15 @@
+@import "_Variables";
+
+.page-article {
+  .article-title {
+
+  }
+
+  .article-content {
+    margin-top: 1em;
+    background-color: $dark;
+    color: $light;
+    padding: 0.85em;
+    border-radius: $border-radius;
+  }
+}

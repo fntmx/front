@@ -1,7 +1,9 @@
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
+.page-articles {
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
 
-  @import "Articles/GridItem";
+    @import "Articles/GridItem";
+  }
 }
