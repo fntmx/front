@@ -16,7 +16,6 @@ export default function ArticlePage(){
 
     const {article} = data;
 
-    console.log(article);
     return (
         <div className="page page-article">
             <div className="article-title">

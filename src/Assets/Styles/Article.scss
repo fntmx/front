@@ -2,14 +2,17 @@
 
 .page-article {
   .article-title {
+    background-color: rgba($default, 0.1);
+    border-bottom: 2px solid $default;
+    padding: 0.5em;
 
+    .article-meta {
+      margin-top: 0.5em;
+    }
   }
 
   .article-content {
     margin-top: 1em;
-    background-color: $dark;
-    color: $light;
-    padding: 0.85em;
-    border-radius: $border-radius;
+    padding: 0.5em;
   }
 }
