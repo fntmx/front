@@ -36,12 +36,14 @@ p {
 @import "Navigation";
 
 //Pages
-@import "Articles";
-@import "Article";
+@import "Articles/Articles";
+@import "Articles/Article";
+@import "Projects/Projects";
 
 //Display
 @import "Display/Alert";
-@import "Articles/Tag";
+@import "Display/Tags";
+@import "Grid/Grid";
 
 //Form
 @import "Form/Text";

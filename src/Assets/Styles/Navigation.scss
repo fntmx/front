@@ -30,9 +30,44 @@
       flex: 1;
 
       a {
+        font-size: 1.125em;
         transition: color $transition-time ease;
         &:hover {
           color: $default;
+        }
+      }
+
+      &.navigation-item-active {
+        a {
+          color: $default;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    height: 150px;
+
+    nav {
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+
+      .navigation-left {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .navigation-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          background-color: rgba($dark, 0.5);
+
+          a {
+            font-size: 1.5em;
+          }
         }
       }
     }

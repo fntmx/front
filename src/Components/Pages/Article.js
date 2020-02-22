@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { useQuery } from '@apollo/react-hooks';
 import { ARTICLE } from '../../GraphQL/Query/Articles';
 import Alert from '../Common/Display/Alert';
-import ArticleTag from '../Articles/ArticleTag';
+import Tags from '../Common/Display/Tags';
 import moment from 'moment';
 
 export default function ArticlePage() {
@@ -20,7 +20,7 @@ export default function ArticlePage() {
     <div className="page page-article">
       <div className="article-title">
         <h1>{article.title}</h1>
-        <ArticleTag tags={article.tags} />
+        <Tags tags={article.tags} />
         <p>{article.description}</p>
         <div className="article-meta">
           <sub>

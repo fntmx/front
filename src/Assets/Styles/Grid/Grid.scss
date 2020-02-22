@@ -1,0 +1,39 @@
+@import "../Variables";
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    min-height: 200px;
+    background-color: $dark;
+    color: $light;
+    @include border(rgba($dark, 0.2));
+
+    .grid-item-title {
+      h2 {
+        margin: 0 0 0.5em 0;
+      }
+
+    }
+
+    .grid-item-footer {
+      display: block;
+
+      margin-top: auto;
+    }
+
+    &:hover {
+      cursor: pointer;
+      @include border(rgba($default, 1));
+    }
+  }
+}

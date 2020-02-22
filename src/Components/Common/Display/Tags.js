@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function ArticleTag({ tags }) {
+export default function Tags({ tags }) {
   return (
-    <div className="article-tags">
+    <div className="tags">
       {tags.map((tag, idx) => {
         return (
-          <span key={idx} className="article-tag">
+          <span key={idx} className="tag">
             {tag}
           </span>
         );

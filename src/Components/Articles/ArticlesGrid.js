@@ -3,7 +3,7 @@ import { useLazyQuery } from '@apollo/react-hooks';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { ARTICLES } from '../../GraphQL/Query/Articles';
-import ArticleTags from './ArticleTag';
+import Tags from '../Common/Display/Tags';
 import { CLIENT_ROUTES } from '../../Routes';
 import InputShell from '../Common/Form/InputShell';
 import Text from '../Common/Form/Text';
@@ -12,11 +12,11 @@ import { Debouncer } from '../../Util/Debouncer';
 
 function ArticleGrid({ title, description, tags, created, author }) {
   return (
-    <div className="article article-grid-item">
+    <div className="article grid-item">
       <div className="grid-item-title">
         <h2>{title}</h2>
         <p>{description}</p>
-        <ArticleTags tags={tags} />
+        <Tags tags={tags} />
       </div>
       <div className="grid-item-footer">
         <p>
@@ -67,7 +67,7 @@ export default function ArticlesGrid() {
       {data.articles.length === 0 && (
         <Alert title="Info" subtitle="No Records Found" status="info" />
       )}
-      <div className="articles-grid">
+      <div className="articles-grid grid">
         {data.articles.map(article => {
           return (
             <Link key={article.id} to={CLIENT_ROUTES.ARTICLE(article.id)}>
