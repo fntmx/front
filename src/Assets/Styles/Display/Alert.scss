@@ -47,4 +47,9 @@
     background-color: rgba($danger, 0.5);
     color: $dark;
   }
+
+  &.alert-info {
+    background-color: rgba($default, 0.5);
+    color: $dark;
+  }
 }

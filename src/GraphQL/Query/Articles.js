@@ -1,36 +1,38 @@
-import {gql} from "apollo-boost";
+import { gql } from 'apollo-boost';
 
 export const ARTICLES = gql`
-query FetchArticles($keywords: [String]) {
+  query FetchArticles($keywords: [String]) {
     articles(keywords: $keywords) {
+      id
+      title
+      description
+      tags
+      created
+      author {
         id
-        title
-        description
-        tags
+        firstName
+        lastName
         created
-        author {
-            id
-            firstName
-            lastName
-            created
-        }
+      }
     }
-}`;
+  }
+`;
 
 export const ARTICLE = gql`
-query Article($id: Int!) {
+  query Article($id: Int!) {
     article(id: $id) {
+      id
+      title
+      description
+      data
+      tags
+      created
+      author {
         id
-        title
-        description
-        data
-        tags
+        firstName
+        lastName
         created
-        author {
-            id
-            firstName
-            lastName
-            created
-        }
+      }
     }
-}`;
+  }
+`;
